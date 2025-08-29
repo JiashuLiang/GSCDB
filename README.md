@@ -34,11 +34,11 @@ The database provides molecular geometries and calculation setups in three stand
 
 2. **JSON format** (`Allmols_info.json`)
    - Structured data containing geometry and calculation setup
-   - **Necessary fields**: `charge`, `multiplicity`, `basis`, `multipole_field`
+   - **Necessary fields**: `charge`, `multiplicity`, `basis`, `multipole_field`, `molecule` (geometry, unit: Angstrom)
    - **Additional metadata**: `num_basis`, `num_pairs`, `xc_grid`, `SCF_ALGORITHM`, `mem_total`, `num_threads`, `AUX_BASIS_CORR` recommended for calculations
 
 3. **XYZ format** (`.xyz`)
-   - Standard geometry format with extended metadata
+   - Standard geometry format with extended metadata (unit: Angstrom)
    - All information other than geometry is embedded in the comment line (line 2)
 
 ### Important Notes
