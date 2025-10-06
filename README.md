@@ -59,6 +59,17 @@ The database provides molecular geometries and calculation setups in three stand
 
 We provide a comprehensive Jupyter notebook (`Analysis/analyze.ipynb`) for systematic evaluation of computational methods against the benchmark database. The analysis workflow processes molecular energies and converts them to the appropriate physical properties for comparison. The only Input Requirements is the `Molecule_Energies.xlsx` file, which should contain the results of your calculations. (Columns: Different computational methods/functionals; Rows: Individual molecules from the database)
 
+### Structured Database Files
+
+Structured Excel files in the `Info/` directory provide comprehensive information about the database:
+
+- **`DatasetEval.xlsx`**: Contains the complete definitions for all 8,383 energy differences, their reference values, and the dataset each entry belongs to
+- **`Datasets.xlsx`**: Provides comprehensive information about each of the 138 datasets, including data source, system types, statistical summaries, and estimated accuracy
+- **`Standard_errors.xlsx`**: Lists the reference uncertainties for each data point, enabling users to meaningfully compare results for newly tested functionals with the original publication
+- **`FD_stepsize.xlsx`**: Documents the finite-difference step sizes used for the Pol130 and V30 datasets
+
+These files enable users to easily access and utilize the benchmark data for custom analysis workflows.
+
 ## License
 This database is openly licensed via CC BY 4.0.
 
