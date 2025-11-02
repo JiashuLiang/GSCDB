@@ -1,7 +1,5 @@
 # GSCDB137: Gold-Standard Chemical Database (Preprint)
 
-> **Note**: This is a preprint version. While the possibility of errors is very small, we will continue updating input formats and reference data as needed or if issues are reported. Version 1.0 will be released upon paper publication.
-
 GSCDB137 is a rigorously compiled benchmark database of 137 data sets (8377 entries) covering main-group and transition-metal reaction energies and barrier heights, non-covalent interactions, dipole moments, polarizabilities, electric-field response energies, and vibrational frequencies. Legacy data from GMTKN55 and MGCDB84 have been updated to today's best references; redundant, spin-contaminated, or low-quality points were removed, and many new, property-focused sets were added.
 
 This comprehensive database provides a stringent platform for density functional approximation (DFA) validation and serves as a foundation for training the next generation of semi-empirical and machine-learned functionals. Testing across 29 popular density-functional approximations reveals the expected Jacob's-ladder hierarchy overall, yet shows key exceptions and provides insights into functional performance across diverse chemical properties.
@@ -43,6 +41,9 @@ The database provides molecular geometries and calculation setups in three stand
    - Standard geometry format with extended metadata (unit: Angstrom)
    - All information other than geometry is embedded in the comment line (line 2)
 
+4. **ORCA Input Files**
+   - Additional ORCA input files (converted from the primary Q-Chem inputs) are available upon request. Contact the primary author if needed.
+
 ### Important Notes
 
 - **Electric field conventions**: Multipole fields use Q-Chem input format. Other software packages may have different sign conventions for electric fields.
@@ -64,7 +65,7 @@ We provide a comprehensive Jupyter notebook (`Analysis/analyze.ipynb`) for syste
 
 Structured Excel files in the `Info/` directory provide comprehensive information about the database:
 
-- **`DatasetEval.xlsx`**: Contains the complete definitions for all 8,377 energy differences, their reference values, and the dataset each entry belongs to
+- **`DatasetEval.xlsx`**: Contains the complete definitions for all 8,377 energy differences, their reference values, and the dataset each entry belongs to; The weights used for calculating weighted errors in TMC34 and O24x5 datasets are also included in other sheets of this file
 - **`Datasets.xlsx`**: Provides comprehensive information about each of the 137 datasets, including data source, system types, statistical summaries, and estimated accuracy
 - **`Standard_errors.xlsx`**: Lists the reference uncertainties for each data point, enabling users to meaningfully compare results for newly tested functionals with the original publication
 - **`FD_stepsize.xlsx`**: Documents the finite-difference step sizes used for the Pol130 and V30 datasets
@@ -102,7 +103,7 @@ For questions, issues, or suggestions regarding the database:
 
 ## Acknowledgments
 
-We thank the authors of MGCDB84, GMTKN55, and ACCDB for providing a solid foundation for this work. We are deeply grateful to Diptarka Hait for insightful discussions and valuable suggestions on refining the dipole moment and static polarizability data sets. We also thank Bun Chan for his generous guidance on the use of his benchmark sets and for providing so much highly accurate reference data. Our appreciation extends to Tarek Scheele and Tim Neudecker for clarifying details of the OEEF set.
+We thank the authors of MGCDB84, GMTKN55, and ACCDB for providing a solid foundation for this work. We are deeply grateful to Diptarka Hait for insightful discussions and valuable suggestions on refining the dipole moment and static polarizability data sets. We also thank Bun Chan for his generous guidance on the use of his benchmark sets and for providing so much highly accurate reference data. Our appreciation extends to Tarek Scheele and Tim Neudecker for clarifying details of the OEEF set. We also thank Klaas Giesbertz and Sebastian Ehlert for their suggestion on our preprint version of the database.
 
 Most importantly, we thank all researchers who devote their time and effort to generating high-quality reference values, whether or not their work is included in this database. We fully recognize not only the substantial computational resources to complete high-level wavefunction calculations, as well as the human time required in the meticulous and often tedious process of evaluating the importance of each energy component and verifying the reliability of every data point. Such work can feel exhausting and thankless, lacking the allure of novelty, yet it is undeniably essential for progress. Without these efforts, we could neither rigorously assess the capabilities of current methods nor confidently guide the development of new ones. The creation of GSCDB137 thus also reflects the collective effort of a global community devoted to accuracy and reliability in computational chemistry; without their contributions, this database would simply not have been possible.
 
