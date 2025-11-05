@@ -17,6 +17,7 @@ The following summarizes substantive updates implemented for arXiv version 2, de
 - Applied statistical weights to O24 and O24x4 high-variance entries to retain chemical diversity while reducing distortion from extreme reaction energies
 - Refined datatype classification: the previous broad ISO category has been subdivided into NC (noncovalent interactions), INC (intramolecular noncovalent interactions), and ISO (structural isomerization) for improved chemical context
 - Adjusted basis sets: adopted d-aug-cc-pV5Z for O24x5_he2 systems (def2-QZVPPD exhibited significant basis set incompleteness errors)
+- Updated reference of S66: added post-CCSD(T) correction from Chem. Phys. Lett. 2025, 863, 141874
 
 
 ## Getting Started
