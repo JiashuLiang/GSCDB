@@ -1,8 +1,23 @@
 # GSCDB137: Gold-Standard Chemical Database (Preprint)
 
+> **Note**: This version corresponds to version 2 of the arXiv preprint. The `arXivV1` branch corresponds to version 1 of the arXiv preprint. The `main` branch is continuously updated with the latest improvements, and version 1.0 will be released upon paper publication.
+
 GSCDB137 is a rigorously compiled benchmark database of 137 data sets (8377 entries) covering main-group and transition-metal reaction energies and barrier heights, non-covalent interactions, dipole moments, polarizabilities, electric-field response energies, and vibrational frequencies. Legacy data from GMTKN55 and MGCDB84 have been updated to today's best references; redundant, spin-contaminated, or low-quality points were removed, and many new, property-focused sets were added.
 
 This comprehensive database provides a stringent platform for density functional approximation (DFA) validation and serves as a foundation for training the next generation of semi-empirical and machine-learned functionals. Testing across 29 popular density-functional approximations reveals the expected Jacob's-ladder hierarchy overall, yet shows key exceptions and provides insights into functional performance across diverse chemical properties.
+
+## Changes from arXivV1 to arXivV2
+
+The following summarizes substantive updates implemented for arXiv version 2, derived from user and reviewer feedback:
+
+- Removed three problematic data points from the 3d4dIPSS dataset
+- Merged XB20 and XB8 into XB25 after removing three overlapping data points
+- Combined PlatonicHD6, PlatonicID6, and PlatonicIG6 into a unified PlatonicRE18 dataset
+- Split P34 into three focused subsets (atomization energies, ionization potentials, and electron affinities) to enable more meaningful statistical analysis
+- Applied statistical weights to O24 and O24x4 high-variance entries to retain chemical diversity while reducing distortion from extreme reaction energies
+- Refined datatype classification: the previous broad ISO category has been subdivided into NC (noncovalent interactions), INC (intramolecular noncovalent interactions), and ISO (structural isomerization) for improved chemical context
+- Adjusted basis sets: adopted d-aug-cc-pV5Z for O24x5_he2 systems (def2-QZVPPD exhibited significant basis set incompleteness errors)
+
 
 ## Getting Started
 
