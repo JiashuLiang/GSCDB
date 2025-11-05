@@ -1,6 +1,6 @@
 # GSCDB138: Gold-Standard Chemical Database (Preprint)
 
-> **Note**: This repository contains multiple versions of the database. The current `main` branch represents the initial preprint version. The `arXivV2` branch (GSCDB137) contains the second version published on arXiv, which incorporates additional data refinement and reorganization based on peer review feedback. Branch `version1.0` is actively maintained and will be formally released upon journal publication.
+> **Note**: This is a preprint version. While the possibility of errors is very small, we will continue updating input formats and reference data as needed or if issues are reported. Version 1.0 will be released upon paper publication.
 
 GSCDB138 is a rigorously compiled benchmark database of 138 data sets (8383 entries) covering main-group and transition-metal reaction energies and barrier heights, non-covalent interactions, dipole moments, polarizabilities, electric-field response energies, and vibrational frequencies. Legacy data from GMTKN55 and MGCDB84 have been updated to today's best references; redundant, spin-contaminated, or low-quality points were removed, and many new, property-focused sets were added.
 
